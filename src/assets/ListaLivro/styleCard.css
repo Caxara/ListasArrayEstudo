@@ -1,0 +1,41 @@
+.boxCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70svh;
+  width: 100%;
+  border: 1px solid gray;
+  box-shadow: 3px 3px 3px gray;
+  background-color: rgba(0, 0, 0, 0.413);
+}
+
+.card {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.minhaBiblioTitulo {
+  color: burlywood;
+}
+.tituloLivro {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.813);
+  font-size: 15px;
+}
+.bolinhaStatus {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}
+.autor {
+  padding: 5px;
+  color: gray;
+  font-size: 12px;
+}
+.ano {
+  color: rgb(0, 255, 229);
+  font-size: 12px;
+}
