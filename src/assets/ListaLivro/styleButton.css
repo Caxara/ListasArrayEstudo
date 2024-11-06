@@ -1,34 +1,47 @@
 .boxBotoes {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
   padding: 10px;
 }
 
 button {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 255, 255, 0.811);
-  color: navy;
-  /* border-radius: 5px; */
-  box-shadow: 1px 2px 2px gray;
+  background-color: #4e5894c6; /* rgba(0, 255, 255, 0.811)*/
+  color: #d3cefff6;
+  box-shadow: -3px -3px 2px rgba(0, 0, 0, 0.776);
+  font-family: "Anton", sans-serif;
   border: none;
   cursor: pointer;
-  font-weight: bold;
+  font-family: "Space mono", monospace;
+  text-transform: uppercase;
+  position: relative;
+  transition: transform 0, 3s ease-in-out, text-shadow 0.25s ease-in-out; /*faz o movimento do clique mais suave*/
 }
+
+/*Efeito de afundamento do botão ao clicar*/
+button:active {
+  transform: translate(2px, 2px); /*move o botão levemente*/
+  box-shadow: 0 2px 4px white; /*adiciona uma sombra mais suave complementando o movimento*/
+  color: black;
+}
+
+button:hover {
+  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  color: black;
+}
+
 .inputNovoLivro {
-  background-color: paleturquoise;
-  box-shadow: -2px -2px 3px rgb(86, 84, 84);
+  background-color: #17213f;
+  color: #0ff;
+  box-shadow: -3px -3px 2px rgba(0, 0, 0, 0.776);
   border: none;
   border-radius: 1px;
+  font-family: "Space mono", monospace;
 }
-.botaoLido {
-  background-color: rgba(153, 205, 50, 0.788);
-}
-.botaoNaoLido {
-  background-color: rgba(255, 255, 0, 0.836);
-}
+
 .botaoAdicionar {
-  background-color: rgba(128, 128, 128, 0.842);
-  color: azure;
+  color: #0ff;
 }

@@ -12,7 +12,7 @@ export type listagem = {
 
 export function CardLista(props: { livros: listagem }) {
   const { titulo, autor, ano, lido } = props.livros;
-  const statusColor = lido ? "green" : "gray";
+  const statusColor = lido ? "rgb(0, 255, 229)" : "gray";
 
   return (
     <div className="card">

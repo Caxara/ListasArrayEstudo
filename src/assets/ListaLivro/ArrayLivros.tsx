@@ -11,9 +11,9 @@ export const ListaDeLivros: listagem[] = [
   },
   {
     id: 2,
-    titulo: "Memórias Póstumas de Brás Cubas",
-    autor: "Machado de Assis",
-    ano: 1881,
+    titulo: "A metamorfose",
+    autor: "Franz Kafka",
+    ano: 1915,
     lido: true,
   },
   {
@@ -39,10 +39,10 @@ export const ListaDeLivros: listagem[] = [
   },
   {
     id: 6,
-    titulo: "A insustentável leveza do ser",
-    autor: "Milan Kundera",
-    ano: 1984,
-    lido: true,
+    titulo: "Olhos d'água",
+    autor: "Conceição Evaristo",
+    ano: 2014,
+    lido: false,
   },
   {
     id: 7,

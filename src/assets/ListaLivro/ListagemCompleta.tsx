@@ -32,7 +32,7 @@ export function ListandoTudo() {
 
   return (
     <div>
-      <h1 className="minhaBiblioTitulo">Minha Biblioteca</h1>
+      <h1 className="minhaBiblioTitulo">Biblioteca-Me</h1>
       <div className="boxBotoes">
         {/*botão para a exibição da lista completa*/}
         <button className="botaoLista" type="button" onClick={alternarLista}>
@@ -58,7 +58,7 @@ export function ListandoTudo() {
         <input
           className="inputNovoLivro"
           type="text"
-          placeholder="Digite o nome do novo livro"
+          placeholder="Título do novo livro"
         />
         {/*falta acrescentar ao código o "onClick={}" */}
         <button className="botaoAdicionar">Novo</button>{" "}
