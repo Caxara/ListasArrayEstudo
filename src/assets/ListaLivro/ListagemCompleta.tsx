@@ -7,27 +7,16 @@ import "./styleButton.css";
 //Criando a listagem completa da lista
 export function ListandoTudo() {
   //Estado para mostrar a visibilidade da lista
-  const [mostrarListaCheia, setMostrarListaCheia] = useState(false);
-  const [mostrarListaLida, setMostrarListaLida] = useState(false);
-  const [mostrarListaNaoLida, setMostrarListaNaoLida] = useState(false);
+  const [filtroLista, setfiltroLista] = useState<
+    "todos" | "lidos" | "nao-lido" | "vazio"
+  >("vazio");
 
-  //Função para alternar a visibilidade da lista
-  const alternarLista = () => {
-    setMostrarListaCheia(!mostrarListaCheia);
-
-    if (mostrarListaLida) setMostrarListaLida(false);
-    if (mostrarListaNaoLida) setMostrarListaNaoLida(false);
-  };
-
-  const alternarLivrosLidos = () => {
-    setMostrarListaLida(!mostrarListaLida);
-    if (mostrarListaCheia) setMostrarListaCheia(false);
-    if (mostrarListaNaoLida) setMostrarListaNaoLida(false);
-  };
-  const alternarLivrosNaoLidos = () => {
-    setMostrarListaNaoLida(!mostrarListaNaoLida);
-    if (mostrarListaCheia) setMostrarListaCheia(false);
-    if (mostrarListaLida) setMostrarListaLida(false);
+  const aplicarFiltro = (filtro: "todos" | "lidos" | "nao-lido" | "vazio") => {
+    if (filtroLista === filtro) {
+      setfiltroLista("vazio");
+    } else {
+      setfiltroLista(filtro);
+    }
   };
 
   return (
@@ -35,14 +24,22 @@ export function ListandoTudo() {
       <h1 className="minhaBiblioTitulo">Biblioteca-Me</h1>
       <div className="boxBotoes">
         {/*botão para a exibição da lista completa*/}
-        <button className="botaoLista" type="button" onClick={alternarLista}>
+        <button
+          className="botaoLista"
+          type="button"
+          onClick={() => {
+            aplicarFiltro("todos");
+          }}
+        >
           Lista
         </button>
         {/*Botão para exibir os livros lidos */}
         <button
           className="botaoLido"
           type="button"
-          onClick={alternarLivrosLidos}
+          onClick={() => {
+            aplicarFiltro("lidos");
+          }}
         >
           Lido
         </button>
@@ -50,7 +47,9 @@ export function ListandoTudo() {
         <button
           className="botaoNaoLido"
           type="button"
-          onClick={alternarLivrosNaoLidos}
+          onClick={() => {
+            aplicarFiltro("nao-lido");
+          }}
         >
           Não Lido
         </button>
@@ -65,33 +64,17 @@ export function ListandoTudo() {
       </div>
       {/*Renderiza a lista de livros completa */}
       <div className="boxCard">
-        {mostrarListaCheia && (
-          <div>
-            {ListaDeLivros.map((listagem) => {
-              return <CardLista livros={listagem} key={listagem.id} />;
-            })}
-          </div>
-        )}
-        {/*Renderizar a lista de livros lidos */}
-        {mostrarListaLida && (
-          <div>
-            {ListaDeLivros.filter((listagem) => listagem.lido).map(
-              (listagem) => (
-                <CardLista livros={listagem} key={listagem.id} />
-              )
-            )}
-          </div>
-        )}
-        {/*Renderizar a lista de livros não lidos */}
-        {mostrarListaNaoLida && (
-          <div>
-            {ListaDeLivros.filter((listagem) => !listagem.lido).map(
-              (listagem) => (
-                <CardLista livros={listagem} key={listagem.id} />
-              )
-            )}
-          </div>
-        )}
+        {/*bloco da lógica condicional faazendo a triagem para renderizar na tela */}
+        {ListaDeLivros.filter((listagem) => {
+          if (filtroLista === "vazio") return false;
+          if (filtroLista === "todos") return true;
+          if (filtroLista === "lidos" && listagem.lido) return true;
+          if (filtroLista === "nao-lido" && !listagem.lido) return true;
+
+          return false;
+        }).map((listagem) => (
+          <CardLista livros={listagem} key={listagem.id} />
+        ))}
       </div>
     </div>
   );

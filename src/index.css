@@ -31,9 +31,9 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100vh;
   min-height: 100vh;
-  background-color: #1e2847; /*#213547*/
+  background-color: #1e2847; #213547
 }
 
 h1 {

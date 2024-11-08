@@ -1,6 +1,6 @@
 import { listagem } from "./ListaCard";
 
-/*Criando uma array para a Lista de Livros */
+/*Criando uma array ccom para a Lista de Livros */
 export const ListaDeLivros: listagem[] = [
   {
     id: 1,
@@ -64,6 +64,55 @@ export const ListaDeLivros: listagem[] = [
     titulo: "Volta ao mundo em 80 dias",
     autor: "Júlio Verne",
     ano: 1872,
+    lido: false,
+  },
+  {
+    id: 11,
+    titulo: "Quarto de despejo",
+    autor: "Carolina Maria de Jesus",
+    ano: 1960,
+    lido: true,
+  },
+  {
+    id: 12,
+    titulo: "Um amor feliz",
+    autor: "Wislawa Szymborska",
+    ano: 2011,
+    lido: true,
+  },
+  {
+    id: 13,
+    titulo: "Canções de atormentar",
+    autor: "Angélica Freitas",
+    ano: 2020,
+    lido: true,
+  },
+  {
+    id: 14,
+    titulo: "Um defeito de cor",
+    autor: "Ana Maria Gonçalves",
+    ano: 2006,
+    lido: false,
+  },
+  {
+    id: 15,
+    titulo: "Um útero é do tamanha de um punho",
+    autor: "Angélica Freitas",
+    ano: 2012,
+    lido: true,
+  },
+  {
+    id: 16,
+    titulo: "O livro das semelhanças",
+    autor: "Ana Martins Marques",
+    ano: 2015,
+    lido: false,
+  },
+  {
+    id: 17,
+    titulo: "Sinuca embaixo d'água",
+    autor: "Carol Bensimon",
+    ano: 2009,
     lido: false,
   },
 ];

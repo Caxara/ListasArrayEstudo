@@ -1,6 +1,7 @@
 .boxBotoes {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 15px;
   padding: 10px;
 }
@@ -8,7 +9,7 @@
 button {
   display: flex;
   justify-content: center;
-  background-color: #4e5894c6; /* rgba(0, 255, 255, 0.811)*/
+  background-color: #4e5894c6;
   color: #d3cefff6;
   box-shadow: -3px -3px 2px rgba(0, 0, 0, 0.776);
   font-family: "Anton", sans-serif;
@@ -17,20 +18,19 @@ button {
   font-family: "Space mono", monospace;
   text-transform: uppercase;
   position: relative;
-  transition: transform 0, 3s ease-in-out, text-shadow 0.25s ease-in-out; /*faz o movimento do clique mais suave*/
+  transition: transform 0, 6s ease-in-out, text-shadow 0.25s ease-in-out; /*faz o movimento do clique mais suave*/
 }
 
 /*Efeito de afundamento do botão ao clicar*/
 button:active {
   transform: translate(2px, 2px); /*move o botão levemente*/
-  box-shadow: 0 2px 4px white; /*adiciona uma sombra mais suave complementando o movimento*/
-  color: black;
+  box-shadow: 0 4px 4px white; /*adiciona uma sombra mais suave complementando o movimento*/
 }
 
 button:hover {
-  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-  color: black;
+  box-shadow: 0 0 15px #0ff, 0 0 10px #0ff, 0 0 5px #0ff;
+  text-shadow: 0 0 15px #0ff, 0 0 10px #0ff, 0 0 5px #0ff;
+  color: #0ff;
 }
 
 .inputNovoLivro {
@@ -44,4 +44,8 @@ button:hover {
 
 .botaoAdicionar {
   color: #0ff;
+}
+
+.botaoAdicionar:hover {
+  color: black;
 }
