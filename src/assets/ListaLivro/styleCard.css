@@ -1,38 +1,47 @@
 .boxCard {
   display: flex;
   flex-direction: column;
-  height: 70svh;
+  height: 60svh;
   font-family: "Space mono", monospace;
-  width: 100%;
+  width: 500px;
   box-shadow: -3px -3px 2px rgba(0, 0, 0, 0.776);
   background-color: #17213f;
   border-bottom: 1px solid rgba(0, 0, 0, 0.742);
-  padding: 15px;
+  padding: 10px;
+  overflow-x: hidden;
   overflow-y: auto;
+  border-radius: 7px;
 }
 
 /*estilizando a barrinha de rolagem do scroll*/
 ::-webkit-scrollbar {
   width: 12px;
+  background-color: #060e28;
+  border-radius: 20px;
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.776);
 }
 
 .boxCard::-webkit-scrollbar-thumb {
   background-color: rgba(0, 255, 255, 0.788);
   border-radius: 10px;
-  border: 3px solid #0c183b;
+  border: 3px solid #060e28;
 }
 
 .card {
   height: 40px;
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
+  box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.776);
+  padding-left: 5px;
 }
 .minhaBiblioTitulo {
   display: flex;
   justify-content: center;
   color: #d3ceffc5; /* burlywood*/
   font-family: "anton", sans-serif;
+  font-size: 50px;
 }
 .tituloLivro {
   display: flex;
@@ -51,7 +60,7 @@
 .autor {
   padding: 5px;
   color: rgb(42, 102, 223);
-  font-size: 11px;
+  font-size: 15px;
 }
 .ano {
   color: rgba(147, 155, 154, 0.824);

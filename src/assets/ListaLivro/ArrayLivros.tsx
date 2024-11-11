@@ -96,9 +96,9 @@ export const ListaDeLivros: listagem[] = [
   },
   {
     id: 15,
-    titulo: "Um útero é do tamanha de um punho",
-    autor: "Angélica Freitas",
-    ano: 2012,
+    titulo: "O profeta",
+    autor: "Khalil Gibran",
+    ano: 1958,
     lido: true,
   },
   {
