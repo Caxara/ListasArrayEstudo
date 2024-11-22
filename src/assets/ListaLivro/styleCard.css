@@ -1,3 +1,12 @@
+.contenerGeral {
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+}
+.contener-Botao-Lista {
+  display: flex;
+}
+
 .boxCard {
   display: flex;
   flex-direction: column;
@@ -41,8 +50,12 @@
   justify-content: center;
   color: #d3ceffc5; /* burlywood*/
   font-family: "anton", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
 }
+.ImputFormulario {
+  padding-left: 52px;
+}
+
 .tituloLivro {
   display: flex;
   gap: 10px;

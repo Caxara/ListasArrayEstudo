@@ -21,10 +21,41 @@ export function ListandoTudo() {
   };
 
   return (
-    <div>
-      <h1 className="minhaBiblioTitulo">Biblioteca-Me</h1>
-      <div className="contenerBotaoImput">
-        <div className="boxBotoes">
+    <div className="contenerGeral">
+      <div>
+        <h1 className="minhaBiblioTitulo">Biblioteca-Me</h1>
+        <form className="ImputFormulario">
+          <p>
+            Título <input type="text" name="titulo" id="inputTitulo"></input>
+            <input
+              type="submit"
+              value={"-.-"}
+              id="adicionarTitulo"
+              className="botaoAdicionar"
+            ></input>
+          </p>
+          <p>
+            Autor <input type="text" name="autor" id="inputAutor"></input>
+            <input
+              type="submit"
+              value={"'.'"}
+              id="adicionarAutor"
+              className="botaoAdicionar"
+            ></input>
+          </p>
+          <p>
+            Ano <input type="number" name="ano" id="inputAno"></input>
+            <input
+              type="submit"
+              value={"'-'"}
+              id="adicionarAno"
+              className="botaoAdicionar"
+            ></input>
+          </p>
+        </form>
+      </div>
+      <div className="contener-Botao-Lista">
+        <div className="contenerBotaoStatus">
           {/*botão para a exibição da lista completa*/}
           <button
             className="botaoLista"
@@ -33,7 +64,7 @@ export function ListandoTudo() {
               aplicarFiltro("todos");
             }}
           >
-            Lista
+            L i s t a
           </button>
           {/*Botão para exibir os livros lidos */}
           <button
@@ -43,7 +74,7 @@ export function ListandoTudo() {
               aplicarFiltro("lidos");
             }}
           >
-            Lido
+            L i d o
           </button>
           {/*Botão para exibir os livros não lidos*/}
           <button
@@ -53,53 +84,23 @@ export function ListandoTudo() {
               aplicarFiltro("nao-lido");
             }}
           >
-            Não Lido
+            N ã o L i d o
           </button>
         </div>
-        <div className="boxImputs">
-          {/*input para adicionar novo livro na lista, "falta acrescentar o value={} e o onChange={}*/}
-          <input
-            className="inputNovoLivro"
-            type="text"
-            placeholder="Digite o título do novo livro"
-          />
-          <input
-            className="inputNovoLivro"
-            type="text"
-            placeholder="Digite o nome do autor do livro"
-          />
-          <input
-            className="inputNovoLivro"
-            type="text"
-            placeholder="Digite o ano de publicação"
-          />
-        </div>
-        <div className="boxBotaoDoImput">
-          {/*falta acrescentar ao código o "onClick={}" */}
-          <button className="botaoAdicionar" onClick={inclusaoLivros}>
-            '.'
-          </button>{" "}
-          <button className="botaoAdicionar" onClick={inclusaoLivros}>
-            -.-
-          </button>{" "}
-          <button className="botaoAdicionar" onClick={inclusaoLivros}>
-            '.'
-          </button>{" "}
-        </div>
-      </div>
-      {/*Renderiza a lista de livros completa */}
-      <div className="boxCard">
-        {/*bloco da lógica condicional faazendo a triagem para renderizar na tela */}
-        {ListaDeLivros.filter((listagem) => {
-          if (filtroLista === "vazio") return false;
-          if (filtroLista === "todos") return true;
-          if (filtroLista === "lidos" && listagem.lido) return true;
-          if (filtroLista === "nao-lido" && !listagem.lido) return true;
+        {/*Renderiza a lista de livros completa */}
+        <div className="boxCard">
+          {/*bloco da lógica condicional faazendo a triagem para renderizar na tela */}
+          {ListaDeLivros.filter((listagem) => {
+            if (filtroLista === "vazio") return false;
+            if (filtroLista === "todos") return true;
+            if (filtroLista === "lidos" && listagem.lido) return true;
+            if (filtroLista === "nao-lido" && !listagem.lido) return true;
 
-          return false;
-        }).map((listagem) => (
-          <CardLista livros={listagem} key={listagem.id} />
-        ))}
+            return false;
+          }).map((listagem) => (
+            <CardLista livros={listagem} key={listagem.id} />
+          ))}
+        </div>
       </div>
     </div>
   );
