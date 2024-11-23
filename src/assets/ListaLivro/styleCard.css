@@ -1,16 +1,40 @@
 .contenerGeral {
   display: flex;
   flex-direction: column;
-  height: 100svh;
+  gap: 15px;
 }
-.contener-Botao-Lista {
+
+/*Configuração do título do site*/
+.minhaBiblioTitulo {
+  display: flex;
+  justify-content: center;
+  color: #d3ceffc5; /* burlywood*/
+  font-family: "anton", sans-serif;
+  font-size: 35px;
+}
+/*A CONFIGURAÇÃO DO FORMULÁRIO ESTÁ NA FOLHA styleButton.css*/
+
+/*Contener abrigando os Div "contenerBotaoStatus" e o Div "boxCard" */
+.contenerCompartilhado-Botão-Lista {
   display: flex;
 }
 
+/*Configuração do carde que conterá as informações*/
+.card {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.776);
+  padding-left: 5px;
+}
+
+/*Configuração do box onde será impresso o card*/
 .boxCard {
   display: flex;
   flex-direction: column;
-  height: 60svh;
+  height: 50svh;
   font-family: "Space mono", monospace;
   width: 500px;
   box-shadow: -3px -3px 2px rgba(0, 0, 0, 0.776);
@@ -22,7 +46,7 @@
   border-radius: 7px;
 }
 
-/*estilizando a barrinha de rolagem do scroll*/
+/*estilizando a barrinha de rolagem do scroll do box Card*/
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #060e28;
@@ -36,26 +60,7 @@
   border: 3px solid #060e28;
 }
 
-.card {
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.776);
-  padding-left: 5px;
-}
-.minhaBiblioTitulo {
-  display: flex;
-  justify-content: center;
-  color: #d3ceffc5; /* burlywood*/
-  font-family: "anton", sans-serif;
-  font-size: 40px;
-}
-.ImputFormulario {
-  padding-left: 52px;
-}
-
+/*Configuração das informações que serão impressas sobre o livro.*/
 .tituloLivro {
   display: flex;
   gap: 10px;
@@ -63,13 +68,7 @@
   color: rgba(251, 244, 244, 0.937);
   font-size: 15px;
 }
-.bolinhaStatus {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50px;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.796);
-}
+
 .autor {
   padding: 5px;
   color: rgb(42, 102, 223);
@@ -78,4 +77,12 @@
 .ano {
   color: rgba(147, 155, 154, 0.824);
   font-size: 11px;
+}
+/*COnfiguração da bolinha que representa o status de leitura de tal livro*/
+.bolinhaStatus {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.796);
 }

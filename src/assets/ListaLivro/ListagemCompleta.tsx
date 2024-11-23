@@ -43,7 +43,7 @@ export function ListandoTudo() {
               className="botaoAdicionar"
             ></input>
           </p>
-          <p>
+          <p style={{ paddingLeft: "10px" }}>
             Ano <input type="number" name="ano" id="inputAno"></input>
             <input
               type="submit"
@@ -54,7 +54,7 @@ export function ListandoTudo() {
           </p>
         </form>
       </div>
-      <div className="contener-Botao-Lista">
+      <div className="contenerCompartilhado-Botão-Lista">
         <div className="contenerBotaoStatus">
           {/*botão para a exibição da lista completa*/}
           <button

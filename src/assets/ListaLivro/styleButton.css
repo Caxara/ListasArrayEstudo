@@ -1,15 +1,19 @@
+/*CONFIGURAÇÕES DOS DIVs ONDE ESTÃO OS BOTÕES DE STATUS DE LEITURA*/
+
 .contenerBotaoStatus {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   height: 500px;
   width: 50px;
   gap: 10px;
   padding: 2px;
 }
 
+/*CONFIGURAÇÕES DOS BOTÕES DE STATUS*/
+
+/*Configuração geral dos botões através da tag <button>*/
 button {
-  height: 145px;
+  height: 122px;
   width: 20px;
   display: flex;
   justify-content: center;
@@ -19,9 +23,12 @@ button {
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-size: 10px;
   font-family: "Space mono", monospace;
   font-weight: bold;
   text-transform: uppercase;
+  outline: 0;
+
   position: relative;
   transition: transform 0, 6s ease-in-out, text-shadow 0.25s ease-in-out; /*faz o movimento do clique mais suave*/
 }
@@ -36,42 +43,6 @@ button:hover {
   box-shadow: 0 0 15px #0ff, 0 0 10px #0ff, 0 0 5px #0ff;
   text-shadow: 0 0 15px #0ff, 0 0 10px #0ff, 0 0 5px #0ff;
   color: #0ff;
-}
-
-p {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
-#inputTitulo {
-  width: 70%;
-  background-color: #17213f;
-  color: #0ff;
-  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.776);
-  border: none;
-  border-radius: 4px;
-  font-family: "Space mono", monospace;
-}
-
-#inputAutor {
-  width: 70%;
-  background-color: #17213f;
-  color: #0ff;
-  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.776);
-  border: none;
-  border-radius: 4px;
-  font-family: "Space mono", monospace;
-}
-
-#inputAno {
-  width: 70%;
-  background-color: #17213f;
-  color: #0ff;
-  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.776);
-  border: none;
-  border-radius: 4px;
-  font-family: "Space mono", monospace;
-  padding-left: 12px;
 }
 
 .botaoLista {
@@ -94,6 +65,69 @@ p {
   border-bottom: 6px solid #2373a8ba;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.977);
 }
+
+/*CONFIGURAÇÕES DO FORMULÁRIO - SEUS INPUTS E BOTÕES*/
+
+/*Contener onde o formulário está distribuído*/
+.ImputFormulario {
+  height: 24svh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid #2373a8ba;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.977);
+}
+
+/*Configuração da tag <p> utilizada para criação dos inputs */
+p {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/*Configuração dos inputs*/
+#inputTitulo {
+  width: 90%;
+  height: 80%;
+  background-color: #17213f;
+  color: #0ff;
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.776);
+  border: none;
+  border-radius: 4px;
+  font-family: "Space mono", monospace;
+  outline: 0;
+}
+
+#inputAutor {
+  width: 90%;
+  height: 80%;
+  background-color: #17213f;
+  color: #0ff;
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.776);
+  border: none;
+  border-radius: 4px;
+  font-family: "Space mono", monospace;
+  outline: 0;
+}
+
+#inputAno {
+  width: 90%;
+  height: 80%;
+  background-color: #17213f;
+  color: #0ff;
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.776);
+  border: none;
+  border-radius: 4px;
+  font-family: "Space mono", monospace;
+  padding-left: 12px;
+  outline: 0;
+}
+
+/*Configuração dos botões dos inputs*/
 .botaoAdicionar {
   display: flex;
   align-items: center;
@@ -108,6 +142,7 @@ p {
   border-bottom: 5px solid #2373a8ba;
   color: #0ff;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.977);
+  outline: 0;
 }
 
 /*Efeito de afundamento do botão ao clicar*/
