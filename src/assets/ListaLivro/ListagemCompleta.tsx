@@ -24,9 +24,14 @@ export function ListandoTudo() {
     <div className="contenerGeral">
       <div>
         <h1 className="minhaBiblioTitulo">Biblioteca-Me</h1>
-        <form className="ImputFormulario">
+        <form
+          action="cadastro.php"
+          autoComplete="off"
+          className="ImputFormulario"
+        >
           <p>
-            Título <input type="text" name="titulo" id="inputTitulo"></input>
+            <label htmlFor="inputTitulo">Título</label>{" "}
+            <input type="text" name="titulo" id="inputTitulo"></input>
             <input
               type="submit"
               value={"-.-"}
@@ -35,7 +40,8 @@ export function ListandoTudo() {
             ></input>
           </p>
           <p>
-            Autor <input type="text" name="autor" id="inputAutor"></input>
+            <label htmlFor="inputAutor">Autor</label>{" "}
+            <input type="text" name="autor" id="inputAutor"></input>
             <input
               type="submit"
               value={"'.'"}
@@ -44,7 +50,8 @@ export function ListandoTudo() {
             ></input>
           </p>
           <p style={{ paddingLeft: "10px" }}>
-            Ano <input type="number" name="ano" id="inputAno"></input>
+            <label htmlFor="inputAno">Ano</label>{" "}
+            <input type="number" name="ano" id="inputAno"></input>
             <input
               type="submit"
               value={"'-'"}
