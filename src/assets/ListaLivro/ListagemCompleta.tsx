@@ -4,6 +4,7 @@ import { CardLista } from "./ListaCard";
 import "./styleCard.css";
 import "./styleButton.css";
 import { inclusaoLivros } from "./InclusaoLivros";
+import { formulario } from "./Formulario";
 
 //Criando a listagem completa da lista
 export function ListandoTudo() {
@@ -24,42 +25,6 @@ export function ListandoTudo() {
     <div className="contenerGeral">
       <div>
         <h1 className="minhaBiblioTitulo">Biblioteca-Me</h1>
-        <form
-          action="cadastro.php"
-          autoComplete="off"
-          className="ImputFormulario"
-        >
-          <p>
-            <label htmlFor="inputTitulo">Título</label>{" "}
-            <input type="text" name="titulo" id="inputTitulo"></input>
-            <input
-              type="submit"
-              value={"-.-"}
-              id="adicionarTitulo"
-              className="botaoAdicionar"
-            ></input>
-          </p>
-          <p>
-            <label htmlFor="inputAutor">Autor</label>{" "}
-            <input type="text" name="autor" id="inputAutor"></input>
-            <input
-              type="submit"
-              value={"'.'"}
-              id="adicionarAutor"
-              className="botaoAdicionar"
-            ></input>
-          </p>
-          <p style={{ paddingLeft: "10px" }}>
-            <label htmlFor="inputAno">Ano</label>{" "}
-            <input type="number" name="ano" id="inputAno"></input>
-            <input
-              type="submit"
-              value={"'-'"}
-              id="adicionarAno"
-              className="botaoAdicionar"
-            ></input>
-          </p>
-        </form>
       </div>
       <div className="contenerCompartilhado-Botão-Lista">
         <div className="contenerBotaoStatus">
@@ -96,7 +61,7 @@ export function ListandoTudo() {
         </div>
         {/*Renderiza a lista de livros completa */}
         <div className="boxCard">
-          {/*bloco da lógica condicional faazendo a triagem para renderizar na tela */}
+          {/*bloco da lógica condicional fazendo a triagem para renderizar na tela */}
           {ListaDeLivros.filter((listagem) => {
             if (filtroLista === "vazio") return false;
             if (filtroLista === "todos") return true;
