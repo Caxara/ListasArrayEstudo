@@ -4,7 +4,7 @@ import { CardLista } from "./ListaCard";
 import "./styleCard.css";
 import "./styleButton.css";
 import { inclusaoLivros } from "./InclusaoLivros";
-import { formulario } from "./Formulario";
+import { Formulario, formulario } from "./Formulario";
 
 //Criando a listagem completa da lista
 export function ListandoTudo() {
@@ -25,6 +25,7 @@ export function ListandoTudo() {
     <div className="contenerGeral">
       <div>
         <h1 className="minhaBiblioTitulo">Biblioteca-Me</h1>
+        <Formulario />
       </div>
       <div className="contenerCompartilhado-Botão-Lista">
         <div className="contenerBotaoStatus">
