@@ -4,7 +4,7 @@ import { CardLista } from "./ListaCard";
 import "./styleCard.css";
 import "./styleButton.css";
 import { inclusaoLivros } from "./InclusaoLivros";
-import { Formulario, formulario } from "./Formulario";
+import { Formulario } from "./Formulario";
 
 //Criando a listagem completa da lista
 export function ListandoTudo() {
@@ -25,7 +25,11 @@ export function ListandoTudo() {
     <div className="contenerGeral">
       <div>
         <h1 className="minhaBiblioTitulo">Biblioteca-Me</h1>
-        <Formulario />
+        <Formulario
+          tituloInicial="Maquina do Tempo"
+          NomeAutor="Joaqui QUalquer"
+          DataAno={1985}
+        />
       </div>
       <div className="contenerCompartilhado-Botão-Lista">
         <div className="contenerBotaoStatus">
