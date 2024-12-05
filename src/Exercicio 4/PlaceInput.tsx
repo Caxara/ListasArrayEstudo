@@ -1,4 +1,4 @@
-export function ExercicioInput(props: {
+export function PlaceInput(props: {
   valorInput: string;
   setvalorInput: React.Dispatch<React.SetStateAction<string>>;
 }) {
@@ -6,8 +6,8 @@ export function ExercicioInput(props: {
     <div>
       <input
         value={props.valorInput}
-        onChange={(evt) => {
-          props.setvalorInput(evt.target.value);
+        onChange={(e) => {
+          props.setvalorInput(e.target.value);
         }}
       ></input>
     </div>

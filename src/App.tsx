@@ -4,7 +4,7 @@
 // import ListaLivro from "./assets/ListaLivro/ListagemCompleta";
 
 import { useState } from "react";
-import { ExercicioInput } from "./Exercicio 4/ExercicioInput";
+import { PlaceInput } from "./Exercicio 4/PlaceInput";
 import { Titulo } from "./Exercicio 4/Titulo";
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       {/* <ListaLivro /> */}
-      <ExercicioInput valorInput={valorInput} setvalorInput={setvalorInput} />
+      <PlaceInput valorInput={valorInput} setvalorInput={setvalorInput} />
       <Titulo textoTitulo={valorInput} />
     </>
   );
